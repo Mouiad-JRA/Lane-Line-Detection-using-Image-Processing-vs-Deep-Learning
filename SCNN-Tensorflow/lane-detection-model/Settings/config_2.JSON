@@ -1,0 +1,16 @@
+{
+  "grad_thx_min":160,
+  "grad_thx_max":255,
+  "grad_thy_min":120,
+  "grad_thy_max":255,
+  "mag_th_min":70,
+  "mag_th_max":200,
+  "dir_th_min":0.87,
+  "dir_th_max":1.3,
+  "s_threshold_min":180,
+  "s_threshold_max":255,
+  "l_threshold_min":160,
+  "l_threshold_max":233,
+  "k_size":15,
+  "adp_thr":224
+}
