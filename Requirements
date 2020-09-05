@@ -1,0 +1,12 @@
+Requirements:
+1)  Hardware: For testing, GPU with 3G memory suffices. For training, we recommend 4xGPU with 12G memory.
+2)  Anaconda
+3)  Spyder IDE
+4)  Pycharm
+5)  Opencv (for tools/lane_evaluation), version 3.2.0.7 (2.4.x should also work).
+6)  Matplotlib
+7)  Numpy==1.13.1
+8)  easydict==1.6
+9) matplotlib==2.0.2
+10) glog==0.3.1
+11) scikit_learn==0.19.1 
