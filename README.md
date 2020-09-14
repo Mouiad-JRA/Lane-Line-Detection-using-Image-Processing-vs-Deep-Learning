@@ -6,6 +6,7 @@
  
 # Lane Line Detection using Image Processing vs Deep Learning
 Lane line detection technique is used in many self-driving autonomous vehicles as well as line-following robots,our project is to develop a software to Detect lane lines in a variety of conditions, including changing road surfaces, curved roads, and variable lighting. An image processing  based detection and a deep learning AI detection were to be implemented, evaluated and compared in the scope of this project.
+[Paper](https://www.researchgate.net/publication/344123734_Lane_Line_Detection_using_Image_Processing_Deep_Learning_comparative_study) for this project.
 # Structure
  An easy to use sandbox for lane detection in the proposed methods, which is an easy-to-use graphical user interface (GUI) that contains two sections:
 1. Image processing section.
