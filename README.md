@@ -120,3 +120,84 @@ The vehicle position is calculated as the difference  between the image center a
 </br>
 #  Step 6: Overlay the detected lane boundaries back onto the original image.</br>
  Now we overlay the detected lanes on the original images using inverse perspective transform.
+ 
+ # Second Deep Learning Section
+## Not: This Section contains Tensorflow implementation of "Spatial As Deep: Spatial CNN for Traffic Scene Understanding" (SCNN-Tensorflow), you can find The original repo for the Section [here](https://github.com/cardwing/Codes-for-Lane-Detection)
+### This section consists of Simple steps:
+1. After we install the necessary packages in the [Requirements](https://github.com/Mouiad-JRA/Lane-Line-Detection-using-Image-Processing-vs-Deep-Learning/blob/master/Requirements)
+2. Download VGG-16:<br/>
+Download the vgg.npy [here](https://github.com/machrisaa/tensorflow-vgg) and put it in SCNN-Tensorflow/lane-detection-model/data.
+3. Pre-trained model for testing:<br/>
+Download it from [here](https://drive.google.com/file/d/1-E0Bws7-v35vOVfqEXDTJdfovUTQ2sf5/view).
+# Results of applying the previous two sections and comparing between them
+<br/>
+Finally you've to run the file computer_vison_1.py and the following GUI will appear:
+<p align="center">
+<img width="550" height="350" src="https://user-images.githubusercontent.com/66889657/92126949-7992c680-ee09-11ea-9694-04b49b0d6793.jpg">
+</p>
+In order to apply Image processing you must press the Computer vision button and the following GUI will appear:
+<p align="center">
+<img width="550" height="350" src="https://user-images.githubusercontent.com/66889657/92127230-c4144300-ee09-11ea-9503-7e07f91cbd6b.jpg">
+</p>
+Now to apply image processing technology, First choose an image:
+<p align="center">
+<img width="550" height="350" src="https://user-images.githubusercontent.com/66889657/92128316-f2dee900-ee0a-11ea-8b0b-91f615956a19.jpg">
+</p>
+after that we can see the result as the following image shows:
+<p align="center">
+<img width="550" height="350" src="https://user-images.githubusercontent.com/66889657/92128582-36d1ee00-ee0b-11ea-99d8-cca38fd877ee.jpg">
+</p>
+Now to apply the SCNN we go back to the first GUI and press the Deep learning button, then the following GUI appears:
+<p align="center">
+<img width="550" height="350" src="https://user-images.githubusercontent.com/66889657/92139824-fbd6b700-ee18-11ea-9429-28a6650e6ae3.jpg">
+</p>
+After that you must choose an image to apply SCNN and the result'll be as the following image:
+<p align="center">
+<img width="550" height="350" src="https://user-images.githubusercontent.com/66889657/92140047-4b1ce780-ee19-11ea-8c37-74f286a54a12.jpg">
+</p>
+If you want to visually compare the two technologies, we can go back to the original interface and choose the compare button, and the following interface appears:
+<p align="center">
+<img width="550" height="350" src="https://user-images.githubusercontent.com/66889657/92140235-83bcc100-ee19-11ea-9ebf-e51cdd796ef3.jpg">
+</p>
+Then you must choose an image from the data set to apply the two technologies and the result'll be as the following image:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/66889657/92140715-2412e580-ee1a-11ea-8755-be7cdb4d331f.jpg">
+</p>
+Now we will compare the SCNN output and the Image processing output using some scenarios as the following figure:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/66889657/92140981-7c49e780-ee1a-11ea-9dee-a1ccb9426f7d.jpg">
+</p>
+From the previous output images we can say the following:
+ we could say that both SCNN and image processing gave us an acceptable output on the previous scenarios, but notice that the SCNN has outperformed Image processing.
+
+# Discussion
+The results clearly show that SCNN network has outperformed image processing significantly in most of the scenarios we have in the dataset, in the scenario of images that contain a deviation we noticed that the SCNN gave much better results than Image processing on the same images, the same is true for scenarios that contain shadows, night, Since the image processing suffers from several problems, the most important of which are shadows and the sunshine, which the image processing technique couldn’t overcome, but the SCNN did.
+# Shortcomings in Image Processing
+we have observed some problems with the current Image Processing  Implementation:</br>
++ when the lane is covered by some shadow, our code originally failed to detect it, we managed to fix this issue by applying the HSL color filtering as another pre-processing step, but it didn't give good results as we expected.
++ Straight lines do not work when there are curves on the road, so to solve this problem we used Bird Eye Transform and it was difficult to get the correct parameters, we are not sure that we got the best settings.
++ For the sake of comparison, we wanted to use Intersection-Over-Union (Iou) and F1 Score , we succeeded applying them on SCNN, but in terms of image processing, we tried in various ways, but we could not achieve Iou and F-Score on this section,  so we decided the comparison should be visual.
+
+# Conclusion
+This was an exciting and challenging first project that got us to understand a lot more about color spaces, image processing and revise some linear algebra too, for the image processing section on one hand and using SCNN for lane detection on the other hand.</br>
+We are looking forward to even more challenging projects that stretch our knowledge in all these fields and more, and help us in understanding how a self-driving car is built!
+# Credits & References:
+ [Codes-for-Lane-Detection](https://github.com/cardwing/Codes-for-Lane-Detection)
+ <br/>
+   </br>
+ [SCNN](https://github.com/XingangPan/SCNN)
+  <br/>
+   </br>
+ [CULane Dataset](https://xingangpan.github.io/projects/CULane.html)
+  <br/>
+    </br>
+ [Mastering OpenCV 4 - Third Edition](https://www.packtpub.com/free-ebooks/application-development/mastering-opencv-4-third-edition/9781789533576)
+  <br/>
+    </br>
+ [Learning OpenCV 3](https://www.oreilly.com/library/view/learning-opencv-3/9781491937983)
+  <br/>
+  </br>
+ [Udacity Advance Lane-Detection of the Road in Autonomous Driving](https://mc.ai/udacity-advance-lane-detection-of-the-road-in-autonomous-driving)
+  <br/>
+  </br>
+
