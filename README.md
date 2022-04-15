@@ -200,4 +200,3 @@ We are looking forward to even more challenging projects that stretch our knowle
  [Udacity Advance Lane-Detection of the Road in Autonomous Driving](https://mc.ai/udacity-advance-lane-detection-of-the-road-in-autonomous-driving)
   <br/>
   </br>
-
